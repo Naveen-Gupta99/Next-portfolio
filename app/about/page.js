@@ -5,7 +5,7 @@ const About = () => {
     <section id="about" className="py-16 px-4 text-gray-800 dark:text-gray-200">
     <div className="max-w-3xl mx-auto text-center">
       <h2 className="text-4xl font-bold mb-6">
-        <div className="inline-block border-blue-500 pb-1">Hey! I'm <span className="font-semibold text-blue-600 dark:text-blue-400">Naveen Kr Gupta</span> and I&apos;m a full stack engineer.</div>
+        <div className="inline-block border-blue-500 pb-1">Hey! I&apos;m <span className="font-semibold text-blue-600 dark:text-blue-400">Naveen Kr Gupta</span> and I&apos;m a full stack engineer.</div>
       </h2>
       <p className="text-lg leading-relaxed mb-6">
         Hello..! I&apos;m <span className="font-semibold text-blue-600 dark:text-blue-400">Naveen Kr Gupta</span> from Maharajganj District.<br />
