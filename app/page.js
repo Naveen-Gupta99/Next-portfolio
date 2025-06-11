@@ -21,7 +21,7 @@ const Page = () => {
 
   //main heading
   const [text, setText] = useState("");
-  const fullText = "Weelcome to Naveen Gupta - Portfolio";
+  const fullText = "WWelcome to Naveen Gupta - Portfolio";
 
   useEffect(() => {
     let index = 0;
@@ -32,7 +32,7 @@ const Page = () => {
       } else {
         clearInterval(interval);
       }
-    },[sentences],1000); // adjust typing speed here
+    },[sentences],50); // adjust typing speed here
     return () => clearInterval(interval);
   }, []);
 
