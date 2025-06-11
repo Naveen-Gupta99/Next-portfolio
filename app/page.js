@@ -32,9 +32,9 @@ const Page = () => {
       } else {
         clearInterval(interval);
       }
-    }, 30); // adjust typing speed here
+    },[sentences] 30); // adjust typing speed here
     return () => clearInterval(interval);
-  }, [sentences]);
+  }, []);
 
   //for syntaxt loop
 
