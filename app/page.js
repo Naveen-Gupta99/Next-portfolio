@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const page = () => {
+const Page = () => {
   const sentences = [
     "Learn C++",
     "Learn JavaScript",
@@ -32,9 +32,9 @@ const page = () => {
       } else {
         clearInterval(interval);
       }
-    }, 25); // adjust typing speed here
+    }, 30); // adjust typing speed here
     return () => clearInterval(interval);
-  }, []);
+  }, [sentences]);
 
   //for syntaxt loop
 
@@ -73,12 +73,12 @@ const page = () => {
 
       <div className="flex flex-col items-center justify-center px-1 ">
         <p className="text-1xl  md:text-2xl md:mx-70  mt-[35px] md:mt-[90px] font-serif text-center">
-          I'm a passionate{" "}
+          I&apos;m a passionate{" "}
           <span className="font-semibold text-blue-600 dark:text-blue-400">
             @MERN Stack developer
           </span>{" "}
           skilled in building dynamic and interactive responsive web
-          applications using MongoDB, Express, React, Next and Node.js. Let’s
+          applications using MongoDB, Express, React, Next and Node.js. Let&apos;s
           create something amazing!
         </p>
       </div>
@@ -165,7 +165,7 @@ const page = () => {
         target="_blank" 
         className="inline-block text-blue-400 hover:text-blue-600 font-medium"
       >
-        Visit Portfolio →
+        Visit Portfolio
       </a>
     </div>
 
@@ -180,7 +180,7 @@ const page = () => {
         target="_blank" 
         className="inline-block text-blue-400 hover:text-blue-600 font-medium"
       >
-        Visit Chat App →
+        Visit Chat App
       </a>
     </div>
 
@@ -230,4 +230,4 @@ const page = () => {
     </>
   );
 };
-export default page;
+export default Page;
