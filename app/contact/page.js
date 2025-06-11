@@ -1,6 +1,6 @@
 import React from 'react'
 
-const contact = () => {
+const Contact = () => {
   return (
     <>
     <div>
@@ -9,7 +9,7 @@ const contact = () => {
     Get in <span className="text-blue-400">Touch</span>
   </h2>
   <p className="text-lg mb-4">
-    Contact me at –
+    Contact me at 
     <a 
       href="mailto:ng968633@gmail.com" 
       className="text-blue-400 hover:text-blue-600 font-medium ml-2"
@@ -63,4 +63,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact
