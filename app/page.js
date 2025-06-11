@@ -32,7 +32,7 @@ const Page = () => {
       } else {
         clearInterval(interval);
       }
-    },[sentences], 150); // adjust typing speed here
+    },[sentences], 250); // adjust typing speed here
     return () => clearInterval(interval);
   }, []);
 
