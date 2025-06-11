@@ -1,24 +1,17 @@
 import React from 'react'
 
-const about = () => {
+const About = () => {
   return (
     <section id="about" className="py-16 px-4 text-gray-800 dark:text-gray-200">
     <div className="max-w-3xl mx-auto text-center">
       <h2 className="text-4xl font-bold mb-6">
-        <div className="inline-block border-blue-500 pb-1">Hey! I'm <span className="font-semibold text-blue-600 dark:text-blue-400">Naveen Kr Gupta</span> and I'm a full stack engineer.</div>
+        <div className="inline-block border-blue-500 pb-1">Hey! I'm <span className="font-semibold text-blue-600 dark:text-blue-400">Naveen Kr Gupta</span> and I&apos;m a full stack engineer.</div>
       </h2>
       <p className="text-lg leading-relaxed mb-6">
-        Hello..! I am <span className="font-semibold text-blue-600 dark:text-blue-400">Naveen Kr Gupta</span> from Maharajganj District.<br />
+        Hello..! I&apos;m <span className="font-semibold text-blue-600 dark:text-blue-400">Naveen Kr Gupta</span> from Maharajganj District.<br />
         Currently, I am pursuing <span className="font-semibold">BCA (Bachelor of Computer Applications)</span> — 1st Year at <span className="font-semibold">MGPG (Mahatma Gandhi Post Graduate College, Gorakhpur)</span>.
       </p>
       </div>
-
-      {/* <div className="mt-[100px] max-w-3xl mx-auto text-center">
-    <h3 className="text-3xl font-bold mb-4 text-blue-600 dark:text-blue-400">My Vision</h3>
-    <p className="text-lg leading-relaxed mb-6">
-      My goal is to become a skilled full-stack developer who not only understands the technical side of software but also creates digital experiences that are useful, inclusive, and inspiring. I aim to contribute to real-world projects that make a difference in people’s lives.
-    </p>
-    </div> */}
 
     <div className="mt-[300px] max-w-3xl mx-auto text-center">
       <h3 className="text-3xl font-bold mb-6 text-blue-600 dark:text-blue-400">Connect With Me</h3>
@@ -63,4 +56,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About
