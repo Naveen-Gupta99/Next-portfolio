@@ -15,7 +15,7 @@ export default function Login() {
 
   return (
     <>
-    <div className="flex min-h-screen items-center justify-center mt-[-200px]">
+    <div className="flex min-h-screen items-center justify-center mt-[-50px]">
       <div className=" p-6 rounded shadow w-80 text-center">
         <h2 className="text-2xl font-bold mb-6">Login</h2>
         <button
