@@ -9,7 +9,7 @@ const About = () => {
       </h2>
       <p className="text-lg leading-relaxed mb-6">
         Hello..! I&apos;m <span className="font-semibold text-blue-600 dark:text-blue-400">Naveen Kr Gupta</span> from Maharajganj District.<br />
-        Currently, I am pursuing <span className="font-semibold">BCA (Bachelor of Computer Applications)</span> — 1st Year at <span className="font-semibold">MGPG (Mahatma Gandhi Post Graduate College, Gorakhpur)</span>.
+        Currently, I am pursuing <span className="font-semibold">BCA (Bachelor of Computer Applications)</span> — 2nd Year at <span className="font-semibold">MGPG (Mahatma Gandhi Post Graduate College, Gorakhpur)</span>.
       </p>
       </div>
 
