@@ -27,7 +27,7 @@ export default function DashboardPage() {
   return (
 <>
     
-    <div className="min-h-screen bg-gradient-to-br from-sky-100 to-white px-4 py-8 sm:px-6 md:px-8">
+  
       <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl p-6 sm:p-10">
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 text-center sm:text-left">
           🎉 Welcome Back, <span className="text-blue-600">{session?.user?.name}</span>
@@ -60,7 +60,7 @@ export default function DashboardPage() {
           </button>
         </div>
       </div>
-    </div>
+  
 
 
 
