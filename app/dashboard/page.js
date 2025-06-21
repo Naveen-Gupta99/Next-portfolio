@@ -1,27 +1,64 @@
-// app/dashboard/page.js
+"use client";
 
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import { redirect } from "next/navigation";
-import LogoutButton from "../components/LogoutButton";
- // client component
+import { useSession, signOut } from "next-auth/react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
-export default async function DashboardPage() {
-  const session = await getServerSession(authOptions);
+export default function Dashboard() {
+  const { data: session, status } = useSession();
+  const [visits, setVisits] = useState(0);
+  const router = useRouter();
 
-  if (!session) {
-    redirect("/login"); // 🔐 Redirect if not logged in
-  }
+  useEffect(() => {
+    fetch("/api/visits")
+      .then((res) => res.json())
+      .then((data) => setVisits(data.visits));
+  }, []);
+
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      router.push("/login");
+    }
+  }, [status, router]);
+
+  if (status === "loading") return <div className="p-6">Loading...</div>;
+  if (!session) return <div className="p-6">You must be logged in.</div>;
 
   return (
+    <div className="min-h-screen bg-gradient-to-br from-sky-100 to-white px-4 py-8 sm:px-6 md:px-8">
+      <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl p-6 sm:p-10">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 text-center sm:text-left">
+          🎉 Welcome Back, <span className="text-blue-600">{session?.user?.name}</span>
+        </h1>
 
-    <>
-    <div className="p-6">
-      <h1 className="text-2xl font-bold">Welcome, {session.user.name}</h1>
-      <p className="mb-4">Email: {session.user.email}</p>
-      <LogoutButton />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div className="bg-blue-50 p-4 sm:p-6 rounded-xl border border-blue-100">
+            <h2 className="text-xs sm:text-sm text-gray-500 uppercase">Your Email</h2>
+            <p className="mt-1 sm:mt-2 text-base sm:text-lg font-medium text-gray-800">{session?.user?.email}</p>
+          </div>
+
+          <div className="bg-green-50 p-4 sm:p-6 rounded-xl border border-green-100">
+            <h2 className="text-xs sm:text-sm text-gray-500 uppercase">Profile Visits</h2>
+            <p className="mt-1 sm:mt-2 text-2xl sm:text-3xl font-bold text-green-600">{visits}</p>
+          </div>
+        </div>
+
+        <div className="mt-6 sm:mt-8 bg-yellow-50 p-4 sm:p-6 rounded-xl border border-yellow-100">
+          <p className="text-gray-700 italic text-center text-sm sm:text-base">
+            “Keep building. Every visit is a chance to inspire someone.”
+          </p>
+        </div>
+
+        <div className="flex justify-center mt-6 sm:mt-10">
+          <button
+            onClick={() => signOut({ callbackUrl: "/login" })}
+            className="px-5 py-2 sm:px-6 sm:py-3 bg-red-500 text-white rounded-xl shadow-md hover:bg-red-600 transition"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
     </div>
-
 
 
 
