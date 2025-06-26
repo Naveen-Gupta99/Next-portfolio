@@ -3,6 +3,7 @@
 import { useSession, signOut } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Asistant from '@/components/Asistant'
 
 export default function DashboardPage() {
   const { data: session, status } = useSession();
@@ -60,7 +61,8 @@ export default function DashboardPage() {
           </button>
         </div>
       </div>
-  
+
+              <asistant/>
 
 
 
